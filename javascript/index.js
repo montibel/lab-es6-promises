@@ -53,8 +53,8 @@ getInstruction("mashedPotatoes", 0, (step1) => {
   (error) => console.log(error)
 );
 
+// Iteration 2 
 
-// Iteration 2 - using promises
 obtainInstruction('steak', 0)
   .then( (step0) => {
     document.querySelector("#steak").innerHTML += `<li>${step0}</li>`,
@@ -98,7 +98,6 @@ obtainInstruction('steak', 0)
   })
 
 
-
 // Iteration 3 using async/await
 async function makeBroccoli() {
    try {
@@ -126,6 +125,7 @@ makeBroccoli()
 
 
 // Bonus 2 - Promise all
+
 Promise.all([
   obtainInstruction("brusselsSprouts", 0),
   obtainInstruction("brusselsSprouts", 1),
@@ -147,3 +147,6 @@ Promise.all([
   document.querySelector("#brusselsSprouts").innerHTML += `<li>Brussels Sprouts are ready!</li>`
   document.querySelector("#brusselsSproutsImg").removeAttribute('hidden')
 });
+
+
+
