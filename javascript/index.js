@@ -126,4 +126,24 @@ makeBroccoli()
 
 
 // Bonus 2 - Promise all
-// ...
+Promise.all([
+  obtainInstruction("brusselsSprouts", 0),
+  obtainInstruction("brusselsSprouts", 1),
+  obtainInstruction("brusselsSprouts", 2),
+  obtainInstruction("brusselsSprouts", 3),
+  obtainInstruction("brusselsSprouts", 4),
+  obtainInstruction("brusselsSprouts", 5),
+  obtainInstruction("brusselsSprouts", 6),
+  obtainInstruction("brusselsSprouts", 7)
+]).then((step) => {
+  document.querySelector("#brusselsSprouts").innerHTML += `<li>${step[0]}</li>`
+  document.querySelector("#brusselsSprouts").innerHTML += `<li>${step[1]}</li>`
+  document.querySelector("#brusselsSprouts").innerHTML += `<li>${step[2]}</li>`
+  document.querySelector("#brusselsSprouts").innerHTML += `<li>${step[3]}</li>`
+  document.querySelector("#brusselsSprouts").innerHTML += `<li>${step[4]}</li>`
+  document.querySelector("#brusselsSprouts").innerHTML += `<li>${step[5]}</li>`
+  document.querySelector("#brusselsSprouts").innerHTML += `<li>${step[6]}</li>`
+  document.querySelector("#brusselsSprouts").innerHTML += `<li>${step[7]}</li>`
+  document.querySelector("#brusselsSprouts").innerHTML += `<li>Brussels Sprouts are ready!</li>`
+  document.querySelector("#brusselsSproutsImg").removeAttribute('hidden')
+});
